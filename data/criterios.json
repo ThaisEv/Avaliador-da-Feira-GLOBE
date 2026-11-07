@@ -1,0 +1,39 @@
+﻿{
+    "criteria":  [
+                     {
+                         "id":  "C1",
+                         "name":  "Pertinência científica",
+                         "description":  "Pergunta ou problema científico claro e relacionado ao GLOBE e ao ambiente; objetivos bem definidos."
+                     },
+                     {
+                         "id":  "C2",
+                         "name":  "Rigor metodológico, interdisciplinaridade e inovação",
+                         "description":  "Método adequado e bem descrito (repetições, controles, registro dos dados); integração de áreas do conhecimento; criatividade da proposta."
+                     },
+                     {
+                         "id":  "C3",
+                         "name":  "Apresentação e comunicação científica",
+                         "description":  "Clareza, organização e domínio do conteúdo; uso do tempo (oral); qualidade visual e legibilidade (pôster/banner)."
+                     },
+                     {
+                         "id":  "C4",
+                         "name":  "Engajamento estudantil",
+                         "description":  "Protagonismo dos estudantes na coleta, análise e apresentação; participação de toda a equipe."
+                     },
+                     {
+                         "id":  "C5",
+                         "name":  "Aplicação dos protocolos e coerência metodológica",
+                         "description":  "Uso correto dos protocolos GLOBE; coerência entre pergunta, dados, resultados e conclusões."
+                     },
+                     {
+                         "id":  "C6",
+                         "name":  "Relevância ambiental e social",
+                         "description":  "Contribuição para a escola, a comunidade e o ambiente local; aplicabilidade dos resultados."
+                     },
+                     {
+                         "id":  "C7",
+                         "name":  "Integração com a ciência cidadã",
+                         "description":  "Envio de dados ao GLOBE, divulgação, participação da comunidade e uso da ciência cidadã."
+                     }
+                 ]
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b3a">
+  <meta name="description" content="Sistema de avaliação da Feira GLOBE.">
+  <title>Avaliação | Feira GLOBE</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./config.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Feira GLOBE - início">
+      <img class="brand-logo" src="./assets/logo.svg" alt="Feira GLOBE Brasil">
+      <span><strong>FEIRA GLOBE</strong><small>AVALIAÇÃO CIENTÍFICA</small></span>
+    </a>
+    <span class="connection" id="connectionStatus"><i></i> Verificando conexão</span>
+  </header>
+
+  <nav class="app-nav" aria-label="Navegação principal"><a href="./">Avaliar trabalho</a><a href="./?painel=pendentes">Avaliações neste aparelho</a><button type="button" id="syncButton">Sincronizar agora</button><a href="./admin.html">Administração</a></nav>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">SISTEMA DE AVALIAÇÃO</p>
+      <h1>Uma ciência que transforma.</h1>
+      <p class="intro-copy">Registre a avaliação do trabalho e contribua para valorizar a investigação científica estudantil.</p>
+    </section>
+
+    <section class="work-card" aria-live="polite">
+      <div class="work-icon">✦</div>
+      <div class="work-info">
+        <span class="eyebrow">TRABALHO EM AVALIAÇÃO</span>
+        <h2 id="workTitle">Identificando trabalho…</h2>
+        <p id="workMeta">Aguarde um instante</p>
+      </div>
+      <span class="work-status" id="workStatus">QR CODE</span>
+    </section>
+
+    <form id="evaluationForm" class="evaluation-form">
+      <section class="section-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">ETAPA 01</p><h2>Identificação</h2></div>
+          <span class="step-number">01</span>
+        </div>
+        <label class="field-label" for="evaluator">Avaliador(a)</label>
+        <select id="evaluator" name="evaluator" required>
+          <option value="">Selecione seu nome</option>
+        </select>
+        <p class="field-help">Cada avaliador deve registrar suas próprias avaliações.</p>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">ETAPA 02</p><h2>Critérios científicos</h2></div>
+          <span class="step-number">02</span>
+        </div>
+        <p class="section-description">Atribua uma pontuação de 1 a 4 para cada critério. São permitidos intervalos de 0,5 ponto.</p>
+        <div id="criteriaList" class="criteria-list"></div>
+        <div class="score-summary">
+          <div><span>Pontuação total</span><small>Máximo de 28 pontos</small></div>
+          <strong><span id="totalScore">0,0</span><small> / 28</small></strong>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div><p class="eyebrow">ETAPA 03</p><h2>Considerações</h2></div>
+          <span class="step-number">03</span>
+        </div>
+        <label class="field-label" for="comment">Ponto de destaque e sugestão</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Registre observações que possam contribuir com a equipe…"></textarea>
+        <p class="field-help">Campo opcional. Seja objetivo e construtivo.</p>
+      </section>
+
+      <div class="form-actions">
+        <p id="saveMessage" class="save-message" role="status">Sua avaliação será armazenada neste aparelho.</p>
+        <button class="submit-button" type="submit"><span>Salvar avaliação</span><b>→</b></button>
+      </div>
+    </form>
+
+    <section class="offline-note">
+      <span class="offline-symbol">◉</span>
+      <div><strong>Preparado para uso em campo</strong><p>As avaliações ficam salvas neste aparelho primeiro. O estado de sincronização aparece em cada registro.</p></div>
+    </section>
+    <section class="section-card pending-panel" id="pendingPanel" hidden><div class="section-heading"><div><p class="eyebrow">ARMAZENAMENTO LOCAL</p><h2>Avaliações deste aparelho</h2></div></div><div id="localRecords"></div></section>
+    <footer>FEIRA NACIONAL DE CIÊNCIAS GLOBE BRASIL <span>•</span> 2026</footer>
+  </main>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/sync.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

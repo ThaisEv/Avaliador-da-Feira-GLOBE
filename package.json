@@ -1,0 +1,11 @@
+{
+  "name": "feira-globe-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "import:data": "powershell -ExecutionPolicy Bypass -File scripts/import-data.ps1",
+    "generate:qrcodes": "node scripts/generate-qrcodes.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": { "qrcode": "^1.5.4" }
+}
