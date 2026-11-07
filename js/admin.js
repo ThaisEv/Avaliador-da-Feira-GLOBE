@@ -3,6 +3,10 @@
   let adminKey = '';
   const status = document.getElementById('status');
   const endpoint = (window.GLOBE_CONFIG && window.GLOBE_CONFIG.appsScriptUrl || '').trim();
+  const rankingSection = document.createElement('section');
+  rankingSection.className = 'section-card';
+  rankingSection.innerHTML = '<div class="section-heading"><div><p class="eyebrow">RESULTADO CONSOLIDADO</p><h2>Classificação dos trabalhos</h2></div></div><p class="form-help">Ordenada pela média dos pontos totais recebidos (máximo 28). Empates compartilham a posição.</p><p id="rankingSummary"></p><div class="table-scroll"><table><thead><tr><th>Posição</th><th>ID</th><th>Modalidade</th><th>Trabalho</th><th>Escola</th><th>Avaliações</th><th>Média final / 28</th><th>Média / 4</th></tr></thead><tbody id="rankingRows"></tbody></table></div>';
+  document.getElementById('dashboard').prepend(rankingSection);
 
   async function api(action, fields = {}) {
     const response = await fetch(endpoint, {
@@ -73,6 +77,18 @@
     const workBody=document.getElementById('workRows');workBody.replaceChildren();
     data.works.filter(r => !modality || String(r[2]) === modality).forEach(r => { const tr=document.createElement('tr');[r[0],r[2],r[3],r[4],r[5],r[6],counts[r[0]]||0].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td);});workBody.append(tr); });
     document.getElementById('summary').textContent=`${evaluations.length} avaliação(ões) filtrada(s) · ${data.works.length} trabalhos · ${data.evaluators.length} avaliadores cadastrados.`;
+    renderRanking(modality);
+  }
+
+  function renderRanking(modality) {
+    const ranking = window.GLOBE_RANKING.compute(data.works, data.evaluations, modality);
+    const body = document.getElementById('rankingRows'); body.replaceChildren();
+    ranking.forEach(item => {
+      const row=document.createElement('tr'); if(item.position<=3) row.classList.add('rank-top');
+      [item.position, item.work[0], item.work[2], item.work[3], item.work[4], item.evaluations, item.averageTotal.toFixed(2).replace('.',','), item.averageScore.toFixed(2).replace('.',',')].forEach(value=>{const cell=document.createElement('td');cell.textContent=value;row.append(cell);});
+      body.append(row);
+    });
+    document.getElementById('rankingSummary').textContent = ranking.length ? `${ranking.length} trabalho(s) com avaliações confirmadas.` : 'Ainda não há avaliações sincronizadas para esta modalidade.';
   }
 
   document.getElementById('modalityFilter').addEventListener('change', render);

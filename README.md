@@ -70,7 +70,7 @@ Depois de cadastrar trabalhos pelo painel, use **Baixar cadastro completo para g
 
 ## Escopo administrativo e segurança
 
-O painel exige chave validada no backend para retornar dados e oferece filtros por modalidade/avaliador, contagens por trabalho, notas/comentários e exportação CSV. Também permite cadastrar trabalhos (ID composto, número, modalidade, título, escola, horário e local) e avaliadores (nome e instituição; ID UUID gerado automaticamente e situação ativa). O Apps Script valida a chave, campos, limites e duplicidade do ID antes de gravar nas abas centrais.
+O painel exige chave validada no backend para retornar dados e oferece filtros por modalidade/avaliador, contagens por trabalho, notas/comentários, exportação CSV e classificação consolidada. A classificação ordena pela média dos totais das avaliações recebidas (máximo 28), atribui a mesma posição em caso de empate e acompanha a quantidade de avaliações. Também permite cadastrar trabalhos (ID composto, número, modalidade, título, escola, horário e local) e avaliadores (nome e instituição; ID UUID gerado automaticamente e situação ativa). O Apps Script valida a chave, campos, limites e duplicidade do ID antes de gravar nas abas centrais.
 
 Após cadastro, os dados entram no catálogo central; o PWA consulta o catálogo publicado ao abrir com internet e guarda a versão mais recente localmente para uso offline posterior. Se estiver offline, novos cadastros só ficam disponíveis depois que o aparelho sincronizar o catálogo. A chave deve ser distribuída somente à administração e trocada em caso de exposição. Não inclua segredos no frontend. Dados locais offline pertencem ao perfil do navegador/aparelho; faça sincronização e confirmação antes de limpar os dados do navegador.
 

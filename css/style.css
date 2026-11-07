@@ -90,6 +90,7 @@ footer span { padding:0 5px; color:var(--green); }
 table { width:100%; border-collapse:collapse; font-size:11px; }
 th,td { padding:9px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
 th { position:sticky; top:0; background:#edf6ef; color:var(--deep); }
+.rank-top td:first-child { color:var(--deep); font-weight:800; }
 .filters { display:flex; gap:15px; margin-bottom:14px; }
 .filters label { flex:1; font-size:11px; }
 .admin-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }

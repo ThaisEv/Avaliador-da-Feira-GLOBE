@@ -1,0 +1,6 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');const path=require('node:path');
+const ctx=vm.createContext({window:{}});vm.runInContext(fs.readFileSync(path.join(__dirname,'..','js/ranking.js'),'utf8'),ctx);
+const works=[['ORAL-001',1,'Oral','Projeto A','Escola A'],['ORAL-002',2,'Oral','Projeto B','Escola B'],['POSTER-001',1,'Pôster','Projeto C','Escola C']];
+const ev=(id,total)=>{const row=Array(20).fill('');row[1]=id;row[15]=total;return row;};
+test('classifica pela média dos pontos, conta envios e compartilha posições empatadas',()=>{const result=ctx.window.GLOBE_RANKING.compute(works,[ev('ORAL-001',28),ev('ORAL-001',20),ev('ORAL-002',24),ev('POSTER-001',20)]);assert.equal(result[0].position,1);assert.equal(result[0].averageTotal,24);assert.equal(result[0].evaluations,2);assert.equal(result[1].position,1);assert.equal(result[2].position,3);});
+test('filtro de modalidade exclui outros trabalhos e registros inválidos',()=>{const result=ctx.window.GLOBE_RANKING.compute(works,[ev('ORAL-001',21),ev('POSTER-001',28),ev('MISSING',24)],'Oral');assert.equal(result.length,1);assert.equal(result[0].work[0],'ORAL-001');});
