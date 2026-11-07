@@ -1,0 +1,1 @@
+# Avaliador-da-Feira-GLOBE
