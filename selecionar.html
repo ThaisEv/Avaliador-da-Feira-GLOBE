@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b3a">
+  <meta name="description" content="Encontre um trabalho da Feira GLOBE para avaliar.">
+  <title>Selecionar projeto | Feira GLOBE</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./config.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Feira GLOBE - início">
+      <img class="brand-logo" src="./assets/logo.svg" alt="Feira GLOBE Brasil">
+      <span><strong>FEIRA GLOBE</strong><small>AVALIAÇÃO CIENTÍFICA</small></span>
+    </a>
+    <span class="connection" id="connectionStatus"><i></i> Verificando conexão</span>
+  </header>
+  <nav class="app-nav" aria-label="Navegação principal">
+    <a href="./">Avaliar trabalho</a><a href="./selecionar.html" aria-current="page">Selecionar projeto</a>
+    <a href="./?painel=pendentes">Avaliações neste aparelho</a><a href="./admin.html">Administração</a>
+  </nav>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">LOCALIZAR TRABALHO</p>
+      <h1>Escolha um projeto para avaliar.</h1>
+      <p class="intro-copy">Filtre pelo dia, modalidade, turno e local. Depois, abra a ficha do projeto escolhido.</p>
+    </section>
+    <section class="section-card selector-card" aria-labelledby="selectorHeading">
+      <div class="section-heading"><div><p class="eyebrow">FILTROS DO EVENTO</p><h2 id="selectorHeading">Encontre o trabalho</h2></div></div>
+      <div class="selector-filters">
+        <label class="field-label" for="dayFilter">Data<select id="dayFilter"><option value="">Selecione a data</option></select></label>
+        <label class="field-label" for="modalityFilter">Modalidade<select id="modalityFilter" disabled><option value="">Selecione a modalidade</option></select></label>
+        <label class="field-label" for="shiftFilter">Turno<select id="shiftFilter" disabled><option value="">Selecione o turno</option></select></label>
+        <label class="field-label" for="locationFilter">Local<select id="locationFilter" disabled><option value="">Selecione o local</option></select></label>
+      </div>
+      <p class="field-help">A lista de projetos será filtrada a cada escolha.</p>
+    </section>
+    <section class="section-card selector-results" aria-live="polite" aria-labelledby="resultsHeading">
+      <div class="section-heading"><div><p class="eyebrow">PROJETOS DISPONÍVEIS</p><h2 id="resultsHeading">Selecione os filtros para começar</h2></div></div>
+      <div id="projectList" class="project-list"></div>
+    </section>
+    <footer>FEIRA NACIONAL DE CIÊNCIAS GLOBE BRASIL <span>•</span> 2026</footer>
+  </main>
+  <script src="./js/data.js"></script>
+  <script src="./js/selecionar.js"></script>
+</body>
+</html>

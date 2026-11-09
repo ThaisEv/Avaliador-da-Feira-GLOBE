@@ -1,7 +1,8 @@
-const CACHE_NAME = "feira-globe-shell-v2";
+const CACHE_NAME = "feira-globe-shell-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
+  "./selecionar.html",
   "./manifest.json",
   "./css/style.css",
   "./js/data.js",
@@ -9,6 +10,7 @@ const APP_SHELL = [
   "./js/database.js",
   "./js/form.js",
   "./js/app.js",
+  "./js/selecionar.js",
   "./assets/icons/icon.svg",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png"

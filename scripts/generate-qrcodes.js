@@ -11,7 +11,9 @@ const csv = [['ID','Número','Modalidade','Título','URL'], ...works.map(w => [w
 fs.writeFileSync(path.join(root,'qrcodes/trabalhos.csv'), '\ufeff'+csv, 'utf8');
 const cards=[];
 (async()=>{
- for(const work of works){const folder=work.modality==='Oral'?'orais':work.modality==='Pôster'?'posteres':'online';const dir=path.join(root,'qrcodes',folder);fs.mkdirSync(dir,{recursive:true});const url=new URL(`?trabalho=${encodeURIComponent(work.id)}`,base).href;const filename=`${work.id}.png`;await QRCode.toFile(path.join(dir,filename),url,{width:480,margin:2,errorCorrectionLevel:'M'});cards.push(`<article><img src="${folder}/${filename}" alt="QR Code ${work.id}"><b>${work.id} · ${work.title}</b><small>${work.school}</small></article>`);}
+ const folders={Oral:'orais','Pôster':'posteres',Online:'online'};const currentFiles=Object.fromEntries(Object.values(folders).map(folder=>[folder,new Set(works.filter(w=>folders[w.modality]===folder).map(w=>`${w.id}.png`))]));
+ for(const work of works){const folder=folders[work.modality]||'online';const dir=path.join(root,'qrcodes',folder);fs.mkdirSync(dir,{recursive:true});const url=new URL(`?trabalho=${encodeURIComponent(work.id)}`,base).href;const filename=`${work.id}.png`;await QRCode.toFile(path.join(dir,filename),url,{width:480,margin:2,errorCorrectionLevel:'M'});cards.push(`<article><img src="${folder}/${filename}" alt="QR Code ${work.id}"><b>${work.id} · ${work.title}</b><small>${work.school}</small></article>`);}
+ for(const [folder,expected] of Object.entries(currentFiles)){const dir=path.join(root,'qrcodes',folder);for(const filename of fs.readdirSync(dir)){if(/^(ORAL|POSTER|ONLINE)-\d+\.png$/i.test(filename)&&!expected.has(filename))fs.unlinkSync(path.join(dir,filename));}}
  const outDir=path.join(root,'qrcodes','impressao');fs.mkdirSync(outDir,{recursive:true});
  const safe=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
  const dateOf=w=>(w.dayTime.match(/\b\d{1,2}\/\d{1,2}\b/)||[])[0]||'Data não definida';
