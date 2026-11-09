@@ -2,15 +2,14 @@
   const filters = [
     { id: 'dayFilter', label: 'Selecione a data', get: dayOf },
     { id: 'modalityFilter', label: 'Selecione a modalidade', get: work => work.modality || 'Modalidade não informada' },
-    { id: 'shiftFilter', label: 'Selecione o turno', get: shiftOf },
-    { id: 'locationFilter', label: 'Selecione o local', get: work => work.location || 'Local não informado' }
+    { id: 'shiftFilter', label: 'Selecione o turno', get: shiftOf }
   ];
-  const selected = ['', '', '', ''];
+  const selected = ['', '', ''];
   const controls = filters.map(filter => document.getElementById(filter.id));
   const list = document.getElementById('projectList');
   const heading = document.getElementById('resultsHeading');
   const status = document.getElementById('connectionStatus');
-  const sorters = [sortDays, sortModalities, sortShifts, (a,b) => a.localeCompare(b, 'pt-BR')];
+  const sorters = [sortDays, sortModalities, sortShifts];
 
   function dayOf(work) {
     return (String(work.dayTime || '').match(/\b\d{1,2}\/\d{1,2}\b/) || [])[0] || 'Data não informada';
@@ -82,28 +81,46 @@
       list.textContent = 'Nenhum projeto corresponde a esses filtros.';
       return;
     }
-    projects.sort((a, b) => Number(a.number || 0) - Number(b.number || 0));
+    const locations = new Map();
     projects.forEach(work => {
-      const card = document.createElement('article');
-      card.className = 'project-card';
-      const info = document.createElement('div');
-      info.className = 'project-info';
-      const id = document.createElement('span');
-      id.className = 'eyebrow';
-      id.textContent = `${work.id} · ${work.modality}`;
-      const title = document.createElement('h3');
-      title.textContent = work.title;
-      const school = document.createElement('p');
-      school.textContent = work.school || 'Instituição não informada';
-      const details = document.createElement('small');
-      details.textContent = [work.dayTime, work.location].filter(Boolean).join(' · ');
-      info.append(id, title, school, details);
-      const open = document.createElement('a');
-      open.className = 'project-open';
-      open.href = `./?trabalho=${encodeURIComponent(work.id)}`;
-      open.textContent = 'Abrir ficha de avaliação';
-      card.append(info, open);
-      list.append(card);
+      const location = work.location || 'Local não informado';
+      if (!locations.has(location)) locations.set(location, []);
+      locations.get(location).push(work);
+    });
+    [...locations.entries()].sort(([a], [b]) => a.localeCompare(b, 'pt-BR', { numeric: true })).forEach(([location, locationProjects]) => {
+      const section = document.createElement('section');
+      section.className = 'location-section';
+      const sectionHeading = document.createElement('div');
+      sectionHeading.className = 'location-heading';
+      const room = document.createElement('h3');
+      room.textContent = location;
+      const count = document.createElement('span');
+      count.textContent = `${locationProjects.length} ${locationProjects.length === 1 ? 'projeto' : 'projetos'}`;
+      sectionHeading.append(room, count);
+      section.append(sectionHeading);
+      locationProjects.sort((a, b) => Number(a.number || 0) - Number(b.number || 0)).forEach(work => {
+        const card = document.createElement('article');
+        card.className = 'project-card';
+        const info = document.createElement('div');
+        info.className = 'project-info';
+        const id = document.createElement('span');
+        id.className = 'eyebrow';
+        id.textContent = `${work.id} · ${work.modality}`;
+        const title = document.createElement('h3');
+        title.textContent = work.title;
+        const school = document.createElement('p');
+        school.textContent = work.school || 'Instituição não informada';
+        const details = document.createElement('small');
+        details.textContent = work.dayTime || 'Horário não informado';
+        info.append(id, title, school, details);
+        const open = document.createElement('a');
+        open.className = 'project-open';
+        open.href = `./?trabalho=${encodeURIComponent(work.id)}`;
+        open.textContent = 'Abrir ficha de avaliação';
+        card.append(info, open);
+        section.append(card);
+      });
+      list.append(section);
     });
   }
 
