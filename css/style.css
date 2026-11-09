@@ -98,10 +98,10 @@ th { position:sticky; top:0; background:#edf6ef; color:var(--deep); }
 .selector-filters .field-label { margin:0; }
 .selector-filters select { display:block; margin-top:8px; }
 .project-list { display:grid; gap:12px; }
-.location-section { display:grid; gap:10px; padding:14px; border:1px solid #cfddd6; border-radius:14px; background:#f8fbf9; }
-.location-heading { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 2px 7px; border-bottom:1px solid var(--line); }
-.location-heading h3 { margin:0; color:var(--deep); font-size:15px; }
-.location-heading span { flex:0 0 auto; color:var(--muted); font-size:10px; }
+.time-section { display:grid; gap:10px; padding:14px; border:1px solid #cfddd6; border-radius:14px; background:#f8fbf9; }
+.time-heading { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 2px 7px; border-bottom:1px solid var(--line); }
+.time-heading h3 { margin:0; color:var(--deep); font-size:15px; }
+.time-heading span { flex:0 0 auto; color:var(--muted); font-size:10px; }
 .project-card { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:16px; border:1px solid var(--line); border-radius:12px; background:#fbfdfb; }
 .project-info { min-width:0; }
 .project-info .eyebrow { margin:0 0 6px; font-size:9px; }

@@ -15,13 +15,38 @@
     return (String(work.dayTime || '').match(/\b\d{1,2}\/\d{1,2}\b/) || [])[0] || 'Data não informada';
   }
 
+  function getTimes(work) {
+    return [...String(work.dayTime || '').matchAll(/(\d{1,2})(?:h|:)(\d{2})?/gi)]
+      .map(match => ({ hour: Number(match[1]), minute: Number(match[2] || 0) }));
+  }
+
   function shiftOf(work) {
-    const schedule = String(work.dayTime || '');
-    const namedShift = schedule.match(/\b(manhã|tarde|noite)\b/i)?.[1];
+    const times = getTimes(work);
+    const startHour = times.length ? times[times.length >= 2 ? times.length - 2 : 0].hour : null;
+    if (startHour !== null) {
+      if (startHour < 13) return 'Manhã';
+      if (startHour >= 18) return 'Noite';
+      return 'Tarde';
+    }
+    const namedShift = String(work.dayTime || '').match(/(manhã|tarde|noite)/i)?.[1];
     if (namedShift) return namedShift[0].toLocaleUpperCase('pt-BR') + namedShift.slice(1).toLocaleLowerCase('pt-BR');
-    const startHour = Number((schedule.match(/\b(\d{1,2}):\d{2}\b/) || [])[1]);
-    if (Number.isFinite(startHour) && startHour > 0) return startHour >= 12 ? 'Tarde' : 'Manhã';
     return 'Turno não informado';
+  }
+
+  function timeLabel(work) {
+    const times = getTimes(work);
+    if (!times.length) return 'Horário não informado';
+    const slot = times.length >= 2 ? times.slice(-2) : times;
+    const format = ({ hour, minute }) => `${hour}h${minute ? String(minute).padStart(2, '0') : ''}`;
+    return slot.map(format).join('–');
+  }
+
+  function sortTimeLabels(a, b) {
+    const toMinutes = label => {
+      const match = label.match(/^(\d{1,2})h(\d{2})?/);
+      return match ? Number(match[1]) * 60 + Number(match[2] || 0) : Number.MAX_SAFE_INTEGER;
+    };
+    return toMinutes(a) - toMinutes(b) || a.localeCompare(b, 'pt-BR', { numeric: true });
   }
 
   function sortDays(a, b) {
@@ -81,24 +106,24 @@
       list.textContent = 'Nenhum projeto corresponde a esses filtros.';
       return;
     }
-    const locations = new Map();
+    const timeSlots = new Map();
     projects.forEach(work => {
-      const location = work.location || 'Local não informado';
-      if (!locations.has(location)) locations.set(location, []);
-      locations.get(location).push(work);
+      const time = timeLabel(work);
+      if (!timeSlots.has(time)) timeSlots.set(time, []);
+      timeSlots.get(time).push(work);
     });
-    [...locations.entries()].sort(([a], [b]) => a.localeCompare(b, 'pt-BR', { numeric: true })).forEach(([location, locationProjects]) => {
+    [...timeSlots.entries()].sort(([a], [b]) => sortTimeLabels(a, b)).forEach(([time, timeProjects]) => {
       const section = document.createElement('section');
-      section.className = 'location-section';
+      section.className = 'time-section';
       const sectionHeading = document.createElement('div');
-      sectionHeading.className = 'location-heading';
-      const room = document.createElement('h3');
-      room.textContent = location;
+      sectionHeading.className = 'time-heading';
+      const slot = document.createElement('h3');
+      slot.textContent = time;
       const count = document.createElement('span');
-      count.textContent = `${locationProjects.length} ${locationProjects.length === 1 ? 'projeto' : 'projetos'}`;
-      sectionHeading.append(room, count);
+      count.textContent = `${timeProjects.length} ${timeProjects.length === 1 ? 'projeto' : 'projetos'}`;
+      sectionHeading.append(slot, count);
       section.append(sectionHeading);
-      locationProjects.sort((a, b) => Number(a.number || 0) - Number(b.number || 0)).forEach(work => {
+      timeProjects.sort((a, b) => Number(a.number || 0) - Number(b.number || 0)).forEach(work => {
         const card = document.createElement('article');
         card.className = 'project-card';
         const info = document.createElement('div');
@@ -110,9 +135,7 @@
         title.textContent = work.title;
         const school = document.createElement('p');
         school.textContent = work.school || 'Instituição não informada';
-        const details = document.createElement('small');
-        details.textContent = work.dayTime || 'Horário não informado';
-        info.append(id, title, school, details);
+        info.append(id, title, school);
         const open = document.createElement('a');
         open.className = 'project-open';
         open.href = `./?trabalho=${encodeURIComponent(work.id)}`;
