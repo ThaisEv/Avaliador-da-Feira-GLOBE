@@ -56,7 +56,7 @@ $env:PUBLIC_URL = 'https://seu-dominio.pages.dev/'
 npm run generate:qrcodes
 ```
 
-Gera `qrcodes/orais/`, `qrcodes/posteres/`, `qrcodes/online/`, `qrcodes/trabalhos.csv` e `qrcodes/imprimir.html`. A página índice `qrcodes/imprimir.html` oferece listas separadas por dia e turno para pôsteres e apresentações orais, e por dia para online. Cada lista abre uma página preparada para imprimir ou salvar em PDF. O destino padrão `SEU-DOMINIO` é apenas um placeholder; não imprima antes de definir `PUBLIC_URL`.
+Gera `qrcodes/orais/`, `qrcodes/posteres/`, `qrcodes/online/`, `qrcodes/trabalhos.csv`, `qrcodes/index.html` e `qrcodes/imprimir.html`. As páginas índice oferecem listas separadas por dia e turno para pôsteres e apresentações orais, e por dia para online. Cada lista abre uma página preparada para imprimir ou salvar em PDF, com botão para voltar ao índice. O destino padrão `SEU-DOMINIO` é apenas um placeholder; não imprima antes de definir `PUBLIC_URL`.
 
 Depois de cadastrar trabalhos pelo painel, use **Baixar cadastro completo para gerar QR Codes** e informe esse JSON em `WORKS_FILE` ao executar o gerador, para incluir os novos IDs nos PNGs e na página de impressão.
 
