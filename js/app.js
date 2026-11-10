@@ -43,10 +43,9 @@
     try {
       await LocalDB.save(record);
       message.textContent = 'Avaliação salva neste aparelho. ' + (navigator.onLine ? 'Tentando sincronizar…' : 'Ficará pendente até a conexão retornar.');
-      document.getElementById('comment').value = ''; EvaluationForm.reset(criteria); await showRecords();
+      document.getElementById('comment').value = ''; EvaluationForm.reset(criteria); window.dispatchEvent(new Event('globe:form-saved')); await showRecords();
       if (navigator.onLine) { const result = await SyncManager.syncRecord(record); message.textContent = result.message; await showRecords(); }
     } catch (error) { console.error(error); message.textContent = 'Não foi possível salvar no armazenamento deste navegador.'; }
   });
-  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./service-worker.js').catch(console.error);
   if (navigator.onLine) SyncManager.syncAll();
 })();

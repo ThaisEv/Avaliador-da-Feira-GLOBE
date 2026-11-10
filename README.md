@@ -10,7 +10,7 @@ Aplicação estática para avaliação por QR Code, preparada para uso offline, 
 npm run import:data
 ```
 
-Resultado esperado: 134 trabalhos (37 Oral, 88 Pôster, 9 Online), sem IDs duplicados, e sete critérios com descrições. Os IDs levam a modalidade, por exemplo `ORAL-052` e `POSTER-052`. `data/avaliadores.json` está intencionalmente vazio: adicione somente os avaliadores confirmados, usando objetos `{ "id": "AV-001", "name": "Nome confirmado", "institution": "Instituição", "active": true }`.
+Resultado esperado: 137 trabalhos (32 Oral, 94 Pôster, 11 Online), sem IDs duplicados, e sete critérios com descrições. Os IDs levam a modalidade, por exemplo `ORAL-052` e `POSTER-052`. `data/avaliadores.json` está intencionalmente vazio: adicione somente os avaliadores confirmados, usando objetos `{ "id": "AV-001", "name": "Nome confirmado", "institution": "Instituição", "active": true }`.
 
 ## Executar e verificar
 
@@ -67,6 +67,10 @@ Depois de cadastrar trabalhos pelo painel, use **Baixar cadastro completo para g
 3. Preset `None`; build command vazio; diretório de saída `/`.
 4. Confirme HTTPS e teste `/`, `/admin.html`, recarga com `?trabalho=ORAL-052` e o Service Worker. O projeto não usa rotas de servidor próprias, então as páginas estáticas funcionam sem redirects adicionais.
 5. Atualize `PUBLIC_URL` e regenere QR Codes se usar domínio próprio.
+
+O arquivo `_headers` envia `Cache-Control: no-store` para HTML e `service-worker.js`, e `no-cache` para JavaScript e manifest. Não é necessário limpar o cache no painel da Cloudflare após um deploy. O Service Worker faz Network First para todos os recursos GET do mesmo domínio, remove caches antigos ao ativar e verifica atualizações ao abrir e a cada cinco minutos.
+
+Quando uma nova versão é detectada, a atualização é aplicada automaticamente se não houver formulário em edição. Se houver alterações no formulário, aparece o botão **Atualizar** e a página só recarrega após a confirmação. O IndexedDB das avaliações e o catálogo local nunca são removidos pelo processo de atualização.
 
 ## Escopo administrativo e segurança
 

@@ -1,14 +1,24 @@
-// Os cadastros oficiais são arquivos estáticos para uso offline após o primeiro acesso.
+// Os arquivos oficiais vêm da rede ou do cache do Service Worker; o catálogo local
+// só é usado como fallback para manter cadastros publicados disponíveis offline.
+const loadCatalogFile = (file, key) => fetch(`./data/${file}`).then(response => {
+  if (!response.ok) throw new Error(`${key} indisponível`);
+  return response.json();
+}).then(data => data[key]);
+
 window.GLOBE_DATA_READY = Promise.all([
-  fetch('./data/trabalhos.json').then(r => { if (!r.ok) throw new Error('Cadastro de trabalhos indisponível'); return r.json(); }),
-  fetch('./data/criterios.json').then(r => { if (!r.ok) throw new Error('Critérios indisponíveis'); return r.json(); }),
-  fetch('./data/avaliadores.json').then(r => { if (!r.ok) throw new Error('Cadastro de avaliadores indisponível'); return r.json(); })
-]).then(async ([works, criteria, evaluators]) => {
-  let catalog = { works: works.works, criteria: criteria.criteria, evaluators: evaluators.evaluators };
+  loadCatalogFile('trabalhos.json', 'works'),
+  loadCatalogFile('criterios.json', 'criteria'),
+  loadCatalogFile('avaliadores.json', 'evaluators')
+]).catch(async error => {
   try {
     const cached = JSON.parse(localStorage.getItem('globe-catalog') || 'null');
-    if (cached && Array.isArray(cached.works) && Array.isArray(cached.evaluators)) catalog = { ...catalog, ...cached };
-  } catch (_) { /* cache local inválido: usa os arquivos oficiais */ }
+    if (cached && Array.isArray(cached.works) && Array.isArray(cached.evaluators)) {
+      return [cached.works, cached.criteria || [], cached.evaluators];
+    }
+  } catch (_) { /* fallback inválido: preserva o erro original */ }
+  throw error;
+}).then(async ([works, criteria, evaluators]) => {
+  let catalog = { works, criteria, evaluators };
   const endpoint = (window.GLOBE_CONFIG && window.GLOBE_CONFIG.appsScriptUrl || '').trim();
   if (endpoint && navigator.onLine) {
     try {
