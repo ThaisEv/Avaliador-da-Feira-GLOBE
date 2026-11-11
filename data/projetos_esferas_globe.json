@@ -1,0 +1,682 @@
+[
+  {
+    "numero_projeto": 31,
+    "nome": "Avaliação de diferentes concentrações de fertilizantes no cultivo de rabanetes a partir de simulante de regolito na Escola Estadual João Alencar de Medeiros – Ipueira/RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 32,
+    "nome": "Cultivo de microverdes no ambiente escolar: experiência na Escola Estadual João Alencar de Medeiros, Ipueira/RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 156,
+    "nome": "Efeitos de diferentes doses de fertilizante no crescimento e na produção de rabanetes em simulante de regolito marciano na Escola Estadual João Francisco da Costa- Ipanguaçu/RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 157,
+    "nome": "Duas variedades, novas possibilidades: análise comparativa da produção de microverdes de rúcula de folha larga e suryva como alternativa sustentável para a agricultura na comunidade Arapuá/RN.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 142,
+    "nome": "MICROVERDES NO SEMIÁRIDO POTIGUAR: EMERGÊNCIA E SOBREVIVÊNCIA DE RÚCULA EM DIFERENTES SUBSTRATOS",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 185,
+    "nome": "Desenvolvimento do rabanete em simulante basáltico inspirado no regolito marciano sob diferentes concentrações de fertilizante",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 24,
+    "nome": "Recursos in situ: cultivo de rabanetes em simulante de regolito marciano sob condições de clima tropical",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 25,
+    "nome": "Da Terra a Marte: cultivo de microverdes em simulante de solo marciano e perspectivas para a agricultura espacial",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 128,
+    "nome": "Produção de micro-verdes em ambiente escolar: cultivo de repolho Krishna e rúcula Surya",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 184,
+    "nome": "Meninas no Espaço e Agricultura Espacial: o cultivo de microverdes no laboratório de Ciências da Natureza da EETI Rui Barbosa",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 158,
+    "nome": "Meninas no Espaço, Equipe Shaula e Stardust Club: uma parceria articulada a partir do Programa GLOBE",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 73,
+    "nome": "Cultivo Sustentável de Microverdes de Rúcula em Substrato de Fibra de Coco e Embalagens PET",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 6,
+    "nome": "Desenvolvimento Vegetal em Condições de Estresse Ambiental: Uma Investigação Científica com Microverdes no Seridó Potiguar.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 3,
+    "nome": "Caracterização dos Solos de Arez (RN): Benefícios do Girassol para Fertilidade, Conservação e Sustentabilidade Agroambiental Local",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 41,
+    "nome": "Sinal Verde para plantar: identificação do início da estação chuvosa no Tocantins",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 129,
+    "nome": "Modernização tecnológica do portal Meninas no Espaço como estratégia de segurança, autonomia e formação em engenharia de software",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 60,
+    "nome": "RABANETES EM SIMULANTES DE REGOLITO MARCIANO: EXPERIMENTO EM ESCOLA MUNICIPAL DE SÃO GONÇALO DO AMARANTE, RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 61,
+    "nome": "MICROVERDES DE RÚCULA, REPOLHO ROXO E BETERRABA",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 45,
+    "nome": "Jardim Coletivo Resiliente ao Calor: gotejamento com garrafas PET e água de reuso",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 1,
+    "nome": "Fatores ambientais que levam as árvores à morte ou as põem em risco.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 4,
+    "nome": "BioMassa Escolar: transformando resíduos de papel em soluções sustentáveis para a construção civil.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 111,
+    "nome": "Cultivo de Rabanetes em Simulante de Solo Marciano: efeito da temperatura e adubação em três localidades potiguares.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 112,
+    "nome": "Estudo observacional do desenvolvimento de microverdes de rúcula em diferentes ambientes residenciais em Natal/RN",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 13,
+    "nome": "Cultivando o Futuro: A Experiência dos Rabanetes no Projeto Meninas do Espaço.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 14,
+    "nome": "Meninas do Espaço na Agricultura Urbana: Análise do Desenvolvimento de Microverdes em Materiais Recicláveis",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 122,
+    "nome": "ESTAÇÃO ARDUINO PARA MONITORAMENTO DA GERMINAÇÃO DE SEMENTES DE RABANETE",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 123,
+    "nome": "Cultivo de Microverdes em Fibra de Coco e Monitoramento Ambiental como Trabalho Futuro",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 70,
+    "nome": "CULTIVO DE RABANETE EM SIMULANTE DE SOLO COM DIFERENTES CONCENTRAÇÕES DE FERTILIZANTE",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 71,
+    "nome": "Cultivo de microverdes de Rúcula surya: comparação de substratos",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 33,
+    "nome": "Meninas no Espaço: investigação da germinação de rabanete e rúcula em simulador marciano",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 104,
+    "nome": "Agricultura Espacial na Educação Básica: Rabanetes em Simulante de Regolito Marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 146,
+    "nome": "Desenvolvimento de rabanetes em simulante de regolito marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 147,
+    "nome": "Produção de microverdes de rúcula utilizando fibra de coco",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 79,
+    "nome": "Cultivando Rabanetes Marcianos no Coração do Seridó",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 81,
+    "nome": "Avaliação de um protótipo de desidratador solar na secagem de frutas em Jucurutu/RN",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 152,
+    "nome": "Cultivo de microverdes de rúcula e repolho: avaliação do desenvolvimento em diferentes substratos",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 153,
+    "nome": "Aproveitamento integral dos alimentos: uma experiência de ciência e sustentabilidade na escola",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 27,
+    "nome": "Cultivo de microverdes em pequenos espaços: uma comparação entre rúcula e repolho roxo",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 190,
+    "nome": "Desenvolvimento de Microverdes de Repolho Roxo em Diferentes Substratos sob Temperaturas Elevadas no Semiárido Potiguar",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 69,
+    "nome": "DESENVOLVIMENTO DE UM SISTEMA DE TRANSPORTEPARA LAGOSTA VIVAS.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 38,
+    "nome": "Bio-Metamorfose: Valorização de Resíduos Através de Bioplástico e Biojoias Sustentáveis",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 95,
+    "nome": "ARTIGO RABANETES MARCIANOS",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 96,
+    "nome": "ARTIGO MICROVERDES",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 97,
+    "nome": "O CÉU QUE ESCONDE MUNDOS",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 19,
+    "nome": "Cultivo de Rabanetes em Simulante de Regolito Marciano em Assú, RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 20,
+    "nome": "Cultivo de Microverdes de Alface Deva e Repolho Krishna em Substrato de Fibra de Coco.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 21,
+    "nome": "SISTEMA AGRÍCOLA DE VISTORIA DE UMIDADE: SAVU",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 42,
+    "nome": "Rabanetes Marcianos: uma experiência de cultivo e investigação científica no ambiente escolar.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 43,
+    "nome": "Cultivo de microverdes no ambiente escolar: experimentação, sustentabilidade e educação científica.",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 44,
+    "nome": "Mulheres, ciências e tecnologias: transformações educacionais a partir da implementação do Programa Meninas no Espaço na EEBBA.",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 82,
+    "nome": "Rabanetes Marcianos no Seridó: Emergência, Sobrevivência e Condições Ambientais",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 83,
+    "nome": "Microverdes no Seridó: Cultivo de Alface, Repolho, Rúcula, Agrião e Rabanete na EETIJA, Caicó/RN",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 84,
+    "nome": "Caracterização Termohigrométrica de um Ambiente Escolar no Seridó Potiguar com Arduino",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 174,
+    "nome": "HIDROCONDICIONAMENTO EM SEMENTES DE Raphanus sativus L. E SEUS EFEITOS NA GERMINAÇÃO E DESENVOLVIMENTO INICIAL EM SIMULANTE DE REGOlITO MARCIANO",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 176,
+    "nome": "DESEMPENHO INICIAL DE PLÂNTULAS DE Raphanus sativus L. CULTIVADAS EM SIMULANTE DE REGOLITO MARCIANO SOB DIFERENTES FORMAS DE APLICAÇÃO DE FERTILIZANTES MINERAIS",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 181,
+    "nome": "GERMINAÇÃO DE SEMENTES DE Raphanus sativus L. EM SIMULANTE DE REGOLITO MARCIANO SOB DIFERENTES DOSAGENS DE FERTILIZANTE MINERAL",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 161,
+    "nome": "Fertilização no Cultivo de Rabanetes em Simulante de Regolito na Escola E.T.I. Dr. Antônio de Souza",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 162,
+    "nome": "Microverdes cultivados na Escola E.T.I. Dr. Antônio de Souza: alternativa para a produção de alimentos",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 29,
+    "nome": "ENTRE A TERRA E MARTE: O DESAFIO DA SOBREVIVÊNCIA DOS RABANETES EM SOLO MARCIANO NAS CONDIÇÕES TERRESTRES.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 90,
+    "nome": "Explorando a agricultura espacial: cultivo de rabanetes em regolito marciano e investigação da pedosfera Terrestre",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 91,
+    "nome": "Cultivo de microverdes de rúcula e repolho roxo em fibra de coco: avaliação do desenvolvimento em ambiente escolar",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 124,
+    "nome": "Rabanetes Marcianos: experiência de cultivo em simulante de regolito em João Câmara – RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 125,
+    "nome": "Cultivo de microverdes em fibra de côco: experiência de agricultura espacial em João Câmara – RN",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 55,
+    "nome": "Produção e Analise do Desenvolvimento de Rabanetes em Simulante Marciano",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 56,
+    "nome": "Space Farming: Produção e Análise do Desenvolvimento de Microverdes em Substrato Alternativo de Fibra de Coco",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 120,
+    "nome": "Microverde como alternativa para a agricultura espacial: sustentabilidade, segurança alimentar e participação feminina.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 121,
+    "nome": "Influência da Cobertura de Nuvens na Radiação UV: Protocolo GLOBE e Sensor GUVA-S12SD",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 98,
+    "nome": "Construção de um plano de gerenciamento de resíduos sólidos alinhado aos protocolos globe – Projeto ReCiclo",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 126,
+    "nome": "Construção de um protótipo de análise da qualidade da água alinhado aos protocolos globe – Projeto AquaSafe",
+    "esfera": "Hidrosfera"
+  },
+  {
+    "numero_projeto": 57,
+    "nome": "MENINAS NO ESPAÇO: COMPREENDENDO SISTEMAS AMBIENTAIS NO CONTEXTO DA EXPLORAÇÃO ESPACIAL",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 59,
+    "nome": "A EXPOFREIRE NA 23ª SEMANA NACIONAL DE CIÊNCIA E TECNOLOGIA: UMA EXPERIÊNCIA DE INTEGRAÇÃO NA ESCOLA ESTADUAL MAURÍCIO FREIRE",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 163,
+    "nome": "Monitoramento do Microclima no espaço escolar com uso Cubesat",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 28,
+    "nome": "Padrões Climáticos e Proliferação Vetorial: Modelagem Computacional de Risco Arboviral nas Microrregiões Potiguares",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 131,
+    "nome": "Quem quer ser cientista? O ponto de partida de meninas do projeto Meninas no Espaço",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 52,
+    "nome": "Prática Científica na Escola: Avaliação do Cultivo Experimental de Rabanetes no CEEP João Faustino Ferreira Neto",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 53,
+    "nome": "Ciência na Prática: Análise do Crescimento e Desenvolvimento dos Microverdes de Rúcula",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 149,
+    "nome": "Agricultura Espacial: Cultivo de Rabanetes em Simulante de Regolito Marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 150,
+    "nome": "Produção Rápida de Microverdes",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 22,
+    "nome": "Cultivo de Rabanete em Simulante Marciano: Comportamento Hídrico e Estabelecimento de Plântulas",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 23,
+    "nome": "Cultivo de microverdes de rúcula em sistema de baixo custo utilizando fibra de coco",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 88,
+    "nome": "Cultivo de rabanetes em substratos distintos: influência da concentração de fertilizante.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 9,
+    "nome": "MONITORAMENTO DO COLEODACTYLUS NATALENSIS COM PROTOCOLOS GLOBE",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 170,
+    "nome": "Ensino de Química e empreendedorismo: a produção de velas aromáticas como prática educativa.",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 171,
+    "nome": "Descobertas Marcianas: um desafio na terra",
+    "esfera": "Pedosfera"
+  },
+  {
+    "numero_projeto": 173,
+    "nome": "A PRAÇA E SUA INTERAÇÃO COM A ESCOLA – UMA PARCERIA NECESSÁRIA PARA PROMOÇÃO DA SUSTENTABILIDADE E DO BEM ESTAR SOCIAL.",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 52,
+    "nome": "Prática Científica na Escola: Avaliação do Cultivo Experimental de Rabanetes no CEEP João Faustino Ferreira Neto",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 53,
+    "nome": "Ciência na Prática: Análise do Crescimento e Desenvolvimento dos Microverdes de Rúcula",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 151,
+    "nome": "Rabanetes em simulante de regolito marciano: desenvolvimento vegetal e eficiência da fertilização",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 46,
+    "nome": "Efeito da fertilização no cultivo de rabanetes em simulante de regolito marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 47,
+    "nome": "Cultivo de microverdes em ambiente escolar: Os desafios e as limitações da produção",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 48,
+    "nome": "Engorda de Ponta Negra: benefícios percebidos e possíveis alterações no ecossistema costeiro",
+    "esfera": "Hidrosfera"
+  },
+  {
+    "numero_projeto": 178,
+    "nome": "BioReflex: Tecnologia Visual e Educação Ambiental em uma Intervenção no Ambiente Escolar",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 15,
+    "nome": "Entre sonhos e possibilidades: perspectivas de futuro e identidade científica de participantes do Projeto Meninas no Espaço.",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 37,
+    "nome": "Percepções sobre a escola no projeto Meninas no Espaço: aspectos valorizados e necessidades de melhoria",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 145,
+    "nome": "Jogos Educativos como Estratégias de Apoio à Aprendizagem Baseada em Projetos: Uma Análise Qualitativa",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 144,
+    "nome": "CIÊNCIA E EDUCAÇÃO EM SAÚDE NO PROJETO MENINAS NO ESPAÇO: UMA CARTILHA EDUCATIVA SOBRE ARMADILHAS PARA MOSQUITOS",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 127,
+    "nome": "Influência de Diferentes Doses de Fertilizante no Cultivo de Rabanetes em Simulante Mineral de Regolito Marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 17,
+    "nome": "O PROTAGONISMO FEMININO NA ASTROBIOLOGIA: CULTIVO DE RABANETES (Raphanus sativus) EM SIMULADO DE SOLO MARCIANO ATRAVÉS DO PROJETO MENINAS NO ESPAÇO",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 18,
+    "nome": "O PROTAGONISMO FEMININO NA ASTROBIOLOGIA: PRODUÇÃO DE MICROVERDES DE RÚCULA E REPOLHO ROXO: CULTIVO EXPERIMENTAL E POTENCIAL NUTRICIONAL ATRAVÉS DO PROJETO MENINAS NO ESPAÇO",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 134,
+    "nome": "COBERTURA DO SOLO E TEMPERATURA SUPERFICIAL EM SANTA CRUZ (RN)",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 183,
+    "nome": "O cultivo de Rabanetes Marcianos na EETI Rui Barbosa: um relato de experiência da Equipe Shaula",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 10,
+    "nome": "Doses de fertilizante e crescimento de rabanetes em simulante de regolito marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 11,
+    "nome": "Microverdes na escola: cultivo com o 6º ano inspirado na agricultura espacial",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 12,
+    "nome": "Energia Eólica, Escassez Hídrica e Desertificação em Lajes/RN: Continuação da Pesquisa com os Protocolos GLOBE",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 75,
+    "nome": "Otimização da agricultura espacial no Rio Grande do Norte",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 76,
+    "nome": "Análise da resposta de diferentes variedades de micro-verdes ao clima semiárido de Cruzeta-RN",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 80,
+    "nome": "Cultivo de Microverdes de Rúcula (Eruca sativa) em Substrato Simulante do Solo Marciano: Avaliação do Desenvolvimento Inicial",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 72,
+    "nome": "Hidroalerta: desenvolvimento de um sistema inteligente de baixo custo para monitoramento de reservatórios de água no semiárido potiguar",
+    "esfera": "Hidrosfera"
+  },
+  {
+    "numero_projeto": 143,
+    "nome": "Eco Sertão: desenvolvimento de solução digital para prevenção de riscos do calor extremo com GLOBE/NASA",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 77,
+    "nome": "Rabanetes Marcianos: Influência de diferentes concentrações de fertilizante no cultivo em simulante de regolito marciano",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 78,
+    "nome": "Produção sustentável de microverdes de rúcula no cultivo em fibra de coco",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 5,
+    "nome": "RABANETES MARCIANOS NO SEMIÁRIDO POTIGUAR: efeitos do estresse térmico e da fertilização mineral no desenvolvimento vegetal",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 117,
+    "nome": "Marte verde: Desafios do cultivo de rabanetes marcianos",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 118,
+    "nome": "Microverdes no espaço: Desafios do cultivo de repolho roxo l",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 7,
+    "nome": "VERDE em Marte",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 8,
+    "nome": "Microverdes em Marte",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 187,
+    "nome": "RABANETES MARCIANOS: CULTIVO NA ESCOLA ESTADUAL SEBASTIÃO GOMES DE OLIVEIRA",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 188,
+    "nome": "MICROVERDES: CULTIVO NA ESCOLA ESTADUAL SEBASTIÃO GOMES DE OLIVEIRA",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 39,
+    "nome": "Estudo do cultivo de Rabanetes Marcianos em diferentes solos sob influência da temperatura em município do Alto Oeste Potiguar.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 40,
+    "nome": "Cultivo de microverdes em substrato de fibra de coco sob condições de temperaturas elevadas: possibilidades para a agricultura sustentável no semiárido.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 26,
+    "nome": "Crescimento de rabanetes em simulante de regolito marciano sob diferentes doses de fertilizante",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 92,
+    "nome": "Meninas entre a Terra e o Espaço: investigação de nuvens e árvores",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 65,
+    "nome": "A Influência da Arborização Urbana na Temperatura do Ar",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 116,
+    "nome": "Uma investigação Colaborativa das Características dos Solos Brasileiros",
+    "esfera": "Pedosfera"
+  },
+  {
+    "numero_projeto": 136,
+    "nome": "Atividades Investigativas de Biosfera e Atmosfera na Escola Municipal São João Ribeirinha",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 54,
+    "nome": "Da tradição à ciência: saberes dos pescadores e a pesca artesanal do peixe-voador em Caiçara do Norte/RN — a influência das condições oceânicas na atividade pesqueira.",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 66,
+    "nome": "Içaroba, a planta que virou cidade: contribuições do GLOBE Observer à educação ambiental",
+    "esfera": "Biosfera"
+  },
+  {
+    "numero_projeto": 106,
+    "nome": "Águas de São Tomé de Paripe: Ciência cidadã e monitoramento ambiental por meio dos protocolos GLOBE",
+    "esfera": "Hidrosfera"
+  },
+  {
+    "numero_projeto": 107,
+    "nome": "Fibra de coco como substrato no cultivo de microverdes: um estudo com rúcula e repolho roxo",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 139,
+    "nome": "Germinar inóspito",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 189,
+    "nome": "A relevância dos dados do programa GLOBE no Brasil",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 191,
+    "nome": "O impacto dos atravessadores na atividade das marisqueiras de Macau/RN",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 193,
+    "nome": "Meninas no Espaço em Ação: desenvolvimento de estação para monitoramento da qualidade do ar com Arduino Uno R3",
+    "esfera": "Atmosfera"
+  },
+  {
+    "numero_projeto": 192,
+    "nome": "Produção de microverdes de rúcula em fibra de coco comercializada: relato de uma experiência de cultivo",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 89,
+    "nome": "Cultivo de microverdes de repolho em diferentes substratos: uma investigação escolar",
+    "esfera": "Terra como sistema"
+  },
+  {
+    "numero_projeto": 140,
+    "nome": "Máquinas térmicas: simulando o motor planetário e a dinâmica dos eventos climáticos extremos",
+    "esfera": "Atmosfera"
+  }
+]

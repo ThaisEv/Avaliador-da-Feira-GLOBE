@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b3a">
+  <meta name="description" content="Premiação por esferas da Feira GLOBE.">
+  <title>Premiação | Feira GLOBE</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./config.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Feira GLOBE - início">
+      <img class="brand-logo" src="./assets/logo.svg" alt="Feira GLOBE Brasil">
+      <span><strong>FEIRA GLOBE</strong><small>PREMIAÇÃO CIENTÍFICA</small></span>
+    </a>
+  </header>
+  <nav class="app-nav" aria-label="Navegação principal">
+    <a href="./">Avaliar trabalho</a>
+    <a href="./selecionar">Selecionar projeto</a>
+    <a href="./premiacao" aria-current="page">Premiação</a>
+    <a href="./admin.html">Administração</a>
+  </nav>
+  <div id="appUpdateNotice" class="app-update-notice" hidden role="status">Uma nova versão está disponível. <button type="button" id="reloadAppButton">Atualizar</button></div>
+  <main class="container awards-page">
+    <section class="intro awards-intro">
+      <p class="eyebrow">RESULTADO POR ESFERAS</p>
+      <h1>Celebrando ideias que transformam.</h1>
+      <p class="intro-copy">Confira os projetos destaque em cada esfera de investigação da Feira GLOBE.</p>
+    </section>
+    <section class="section-card awards-login" id="loginPanel">
+      <div class="section-heading"><div><p class="eyebrow">ACESSO RESTRITO</p><h2>Consultar premiação</h2></div><span class="award-lock">✦</span></div>
+      <p class="form-help">Os resultados usam as avaliações confirmadas e estão protegidos pela chave administrativa.</p>
+      <label class="field-label" for="awardKey">Chave administrativa</label>
+      <input id="awardKey" type="password" autocomplete="current-password">
+      <button class="submit-button" id="loadAwardsButton" type="button"><span>Carregar premiação</span><b>→</b></button>
+      <p id="awardStatus" class="save-message" role="status"></p>
+    </section>
+    <section id="awardsPanel" hidden>
+      <div class="awards-summary" id="awardsSummary"></div>
+      <div class="sphere-list" id="sphereList"></div>
+    </section>
+    <footer>FEIRA NACIONAL DE CIÊNCIAS GLOBE BRASIL <span>•</span> 2026</footer>
+  </main>
+  <script src="./js/pwa-update.js"></script>
+  <script src="./js/ranking.js"></script>
+  <script src="./js/premiacao.js"></script>
+</body>
+</html>

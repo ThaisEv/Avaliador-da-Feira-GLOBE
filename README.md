@@ -26,6 +26,10 @@ Abra `http://localhost:8000/?trabalho=ORAL-052`. `npm test` executa os testes au
 
 O avaliador precisa abrir o app conectado pelo menos uma vez para que o Service Worker armazene a interface e os JSONs oficiais. Cada avaliação recebe UUID e é gravada no IndexedDB antes do envio. Estados locais: `pending`, `syncing`, `synced` e `error`. O app tenta sincronizar na abertura, ao retornar a conexão e pelo botão manual; conserva o registro até confirmação explícita do Apps Script.
 
+## Premiação por esferas
+
+A página `premiacao.html` exibe a classificação por esfera usando as avaliações confirmadas do painel administrativo. Ela cruza o número original de cada trabalho com `data/projetos_esferas_globe.json` pelo campo `numero_projeto`, sem alterar a estrutura da planilha ou do Apps Script. Como as avaliações são dados restritos, a página solicita a mesma chave administrativa usada no painel.
+
 Configure a URL implantada do Apps Script em `config.js`:
 
 ```js
