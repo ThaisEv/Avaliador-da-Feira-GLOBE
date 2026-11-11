@@ -69,6 +69,9 @@ select:focus, textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px r
 textarea { resize:vertical; min-height:104px; }
 .form-actions { padding:5px 2px 0; }
 .save-message { min-height:16px; margin:0 0 10px; color:var(--muted); font-size:11px; }
+.save-message.success { min-height:0; padding:13px 15px; border:1px solid #8bcdb0; border-radius:10px; background:#e2f6e9; color:#075c42; font-size:13px; font-weight:800; }
+.save-message.success::before { content:"✓"; display:inline-grid; width:20px; height:20px; margin-right:8px; place-items:center; border-radius:50%; background:#168579; color:white; font-size:13px; vertical-align:-4px; }
+.save-message.error { color:#a33d2d; font-weight:700; }
 .submit-button { width:100%; border:0; border-radius:12px; background:var(--deep); color:white; padding:16px 19px; display:flex; align-items:center; justify-content:space-between; font:inherit; font-size:13px; font-weight:750; cursor:pointer; transition:background .2s, transform .2s; }
 .submit-button:hover { background:var(--green); transform:translateY(-1px); }
 .submit-button b { font-size:20px; font-weight:400; }

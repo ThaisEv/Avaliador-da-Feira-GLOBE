@@ -5,6 +5,7 @@
   const message = document.getElementById('saveMessage');
   const pendingPanel = document.getElementById('pendingPanel');
   const syncButton = document.getElementById('syncButton');
+  const setMessage = (text, state = '') => { message.textContent = text; message.className = `save-message${state ? ` ${state}` : ''}`; };
   try { await window.GLOBE_DATA_READY; }
   catch (error) { document.getElementById('workTitle').textContent = 'Não foi possível carregar os dados oficiais'; document.getElementById('workMeta').textContent = 'Conecte-se à internet uma vez para armazenar o cadastro neste aparelho.'; form.querySelector('[type=submit]').disabled = true; return; }
   const { works, criteria, evaluators } = window.GLOBE_DATA;
@@ -31,21 +32,21 @@
     records.forEach(record => { const row = document.createElement('p'); row.className = 'local-record'; row.textContent = `${record.workId} • ${record.evaluatorName} • ${record.total.toFixed(1)} pts • ${record.syncStatus}`; document.getElementById('localRecords').append(row); });
   }
   await showRecords();
-  syncButton.addEventListener('click', async () => { syncButton.disabled = true; message.textContent = 'Sincronizando avaliações pendentes…'; const result = await SyncManager.syncAll(); message.textContent = result.message; await showRecords(); syncButton.disabled = false; });
+  syncButton.addEventListener('click', async () => { syncButton.disabled = true; setMessage('Sincronizando avaliações pendentes…'); const result = await SyncManager.syncAll(); setMessage(result.message); await showRecords(); syncButton.disabled = false; });
   form.addEventListener('submit', async event => {
     event.preventDefault(); if (!work) return;
     const evaluatorId = document.getElementById('evaluator').value;
-    if (!evaluatorId) { message.textContent = 'Selecione seu nome para continuar.'; document.getElementById('evaluator').focus(); return; }
-    if (!EvaluationForm.valid()) { message.textContent = 'Atribua uma nota válida de 1 a 4, em intervalos de 0,5, nos sete critérios.'; return; }
+    if (!evaluatorId) { setMessage('Selecione seu nome para continuar.'); document.getElementById('evaluator').focus(); return; }
+    if (!EvaluationForm.valid()) { setMessage('Atribua uma nota válida de 1 a 4, em intervalos de 0,5, nos sete critérios.'); return; }
     const evaluator = evaluators.find(item => item.id === evaluatorId);
     const scores = EvaluationForm.getScores();
     const record = { submissionId: crypto.randomUUID(), workId: work.id, workNumber: work.number, workTitle: work.title, modality: work.modality, evaluatorId, evaluatorName: evaluator.name, evaluatorSchool: evaluator.institution, scores, total: scores.reduce((a,b)=>a+b,0), average: scores.reduce((a,b)=>a+b,0)/7, comment: document.getElementById('comment').value.trim(), createdAt: new Date().toISOString(), syncStatus: 'pending' };
     try {
       await LocalDB.save(record);
-      message.textContent = 'Avaliação salva neste aparelho. ' + (navigator.onLine ? 'Tentando sincronizar…' : 'Ficará pendente até a conexão retornar.');
+      setMessage('Avaliação salva neste aparelho. ' + (navigator.onLine ? 'Tentando sincronizar…' : 'Ficará pendente até a conexão retornar.'));
       document.getElementById('comment').value = ''; EvaluationForm.reset(criteria); window.dispatchEvent(new Event('globe:form-saved')); await showRecords();
-      if (navigator.onLine) { const result = await SyncManager.syncRecord(record); message.textContent = result.message; await showRecords(); }
-    } catch (error) { console.error(error); message.textContent = 'Não foi possível salvar no armazenamento deste navegador.'; }
+      if (navigator.onLine) { const result = await SyncManager.syncRecord(record); setMessage(result.message, result.ok ? 'success' : 'error'); await showRecords(); }
+    } catch (error) { console.error(error); setMessage('Não foi possível salvar no armazenamento deste navegador.', 'error'); }
   });
   if (navigator.onLine) SyncManager.syncAll();
 })();
