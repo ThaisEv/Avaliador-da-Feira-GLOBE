@@ -10,7 +10,7 @@ const SyncManager = (() => {
       const result = await response.json();
       if (result.ok !== true || result.submissionId !== record.submissionId) throw new Error(result.error || 'Confirmação do backend inválida.');
       await LocalDB.update({ ...record, syncStatus: 'synced', syncedAt: new Date().toISOString() });
-      return { ok: true, message: 'Avaliação sincronizada e confirmada pelo servidor.' };
+      return { ok: true, message: 'Submissão da avaliação enviada com sucesso.' };
     } catch (error) {
       await LocalDB.update({ ...record, syncStatus: 'error', syncError: String(error.message || error) });
       return { ok: false, message: 'Não houve confirmação do servidor. A avaliação permanece neste aparelho para nova tentativa.' };
