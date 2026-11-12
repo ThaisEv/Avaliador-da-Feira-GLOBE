@@ -80,13 +80,13 @@ textarea { resize:vertical; min-height:104px; }
 .awards-summary span { color:#d1e6de; font-size:11px; }
 .sphere-list { display:grid; gap:18px; }
 .sphere-section { padding:20px; border:1px solid var(--line); border-radius:16px; background:var(--white); box-shadow:0 5px 20px rgba(12,61,54,.025); }
-.sphere-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:16px; }
+.sphere-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:72px; }
 .sphere-heading .eyebrow { margin-bottom:5px; }
 .sphere-heading h2 { margin:0; color:var(--deep); font-size:21px; }
 .sphere-heading > span { color:var(--muted); font-size:10px; white-space:nowrap; }
-.award-podium { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; align-items:end; padding:18px 10px 0; border-bottom:10px solid #0b5550; border-radius:0 0 7px 7px; background:linear-gradient(180deg,#f8fbf9 0%,#edf6ef 100%); }
-.award-card { position:relative; display:flex; flex-direction:column; gap:10px; min-width:0; min-height:205px; padding:13px 15px 17px; border:1px solid var(--line); border-radius:13px 13px 4px 4px; background:#f8fbf9; box-shadow:0 5px 12px rgba(12,61,54,.06); }
-.award-place-1 { min-height:250px; border-color:#d6b75c; background:linear-gradient(145deg,#fffdf1,#f8fbf9); box-shadow:0 10px 22px rgba(160,125,30,.16); }
+.award-podium { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; align-items:stretch; padding:18px 10px 0; border-bottom:10px solid #0b5550; border-radius:0 0 7px 7px; background:linear-gradient(180deg,#f8fbf9 0%,#edf6ef 100%); }
+.award-card { position:relative; display:flex; flex-direction:column; gap:10px; min-width:0; min-height:340px; padding:13px 15px 17px; border:1px solid var(--line); border-radius:13px 13px 4px 4px; background:#f8fbf9; box-shadow:0 5px 12px rgba(12,61,54,.06); }
+.award-place-1 { min-height:365px; border-color:#d6b75c; background:linear-gradient(145deg,#fffdf1,#f8fbf9); box-shadow:0 10px 22px rgba(160,125,30,.16); }
 .award-place-2 { border-color:#c5d0d0; }
 .award-place-3 { border-color:#d7b79f; }
 .award-medal { display:block; width:min(100%,130px); height:86px; margin:-57px auto 0; object-fit:contain; object-position:bottom; filter:drop-shadow(0 5px 4px rgba(7,59,58,.15)); }
